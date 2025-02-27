@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-pure-white text-gray-800 font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-dark-green;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+  
+  p {
+    @apply my-4 leading-relaxed;
+  }
+  
+  a {
+    @apply text-light-green hover:text-dark-green transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .btn-primary {
+    @apply bg-dark-green text-white hover:bg-light-green shadow-lg;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-dark-green text-dark-green hover:bg-dark-green hover:text-white;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-xl;
+  }
+  
+  .section {
+    @apply py-16 md:py-24;
+  }
+  
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-dark-green to-light-green;
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-r from-dark-green to-light-green animate-gradient bg-[length:200%_200%];
+}
+
+.crypto-ticker {
+  @apply overflow-hidden whitespace-nowrap;
+}
+
+.crypto-ticker-content {
+  @apply inline-block animate-[marquee_30s_linear_infinite];
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #005C2E !important;
+}
